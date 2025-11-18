@@ -2,7 +2,7 @@ body {background-color: #f8f9fa;}
 .hero {height: 70vh; background: linear-gradient(#007bff, #0056b3); display: flex; align-items: center; justify-content: center; color: white; text-align: center;}
 .card img {height: 140px; object-fit: contain;}
 .hero {
-    background-image: url('colombo.png');
+    background-image: url('colombo.jpeg');
     background-size: cover;      /* make it cover the whole section */
     background-position: center; /* center the image */
     height: 70vh;                /* adjust the height as needed */
