@@ -1,11 +1,22 @@
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({behavior: 'smooth'});
+    });
+});
+
 // Booking form confirmation
 const bookingForm = document.getElementById("bookingForm");
 if (bookingForm) {
     bookingForm.addEventListener("submit", function(e) {
         e.preventDefault();
         const result = document.getElementById("result");
-        result.classList.remove("d-none");
-        result.innerText = "Your ride has been booked successfully!";
+        if(result){
+            result.classList.remove("d-none");
+            result.innerText = "Your ride has been booked successfully!";
+        }
+        bookingForm.reset(); // optional: clears form after submission
     });
 }
 
