@@ -7,56 +7,6 @@
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
-
-<style>
-/* Hero Section */
-.hero-about {
-    height: 60vh;
-    background: url('colombo2.jpeg') center/cover no-repeat;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center;
-}
-.hero-about::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.55);
-}
-.hero-about h1 {
-    position: relative;
-    font-size: 3rem;
-    font-weight: 800;
-}
-
-/* Fade-in animation */
-.fade-in {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: 0.9s ease;
-}
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Counter style */
-.counter-box {
-    background: white;
-    border-radius: 15px;
-    padding: 25px;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-.counter-number {
-    font-size: 2.3rem;
-    font-weight: 800;
-    color: #007bff;
-}
-</style>
 </head>
 
 <body>
@@ -74,8 +24,8 @@
   </div>
 </nav>
 
-<!-- HERO -->
-<section class="hero-about">
+<!-- HERO / BANNER -->
+<section class="page-hero">
     <h1>About Spero</h1>
 </section>
 
@@ -146,7 +96,6 @@
 <script>
 // Fade-in on scroll
 const faders = document.querySelectorAll(".fade-in");
-
 function checkVisibility() {
     faders.forEach(el => {
         const rect = el.getBoundingClientRect();
