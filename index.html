@@ -5,19 +5,44 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Spero - Home</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<style>
+/* Hero/banner */
+.hero {
+    height: 60vh;
+    background: url('spero-banner.png') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+}
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* Navbar logo spacing */
+.navbar-brand img {
+    height: 50px;
+}
+</style>
 </head>
 <body>
 
+<!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <div class="container">
     <a class="navbar-brand d-flex align-items-center" href="index.html">
-  <img src="sperologo1.png" alt="Logo" height="50">
-
-  <span>Spero</span>
-</a>
-
-
+      <img src="sperologo1.png" alt="Spero Logo">
+      <span class="ms-2 fw-bold">Spero</span>
+    </a>
     <ul class="navbar-nav ms-auto">
       <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
       <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
@@ -28,13 +53,15 @@
   </div>
 </nav>
 
-<section class="hero text-center text-light d-flex align-items-center justify-content-center">
-  <div>
-    <h1 class="display-5 fw-bold">Spero</h1>
-    <p class="lead">Fast. Safe. Reliable rides at your fingertips.</p>
+<!-- Hero/Banner -->
+<section class="hero">
+  <div class="hero-content">
+    <h1 class="display-4 fw-bold">Fast. Safe. Reliable Rides.</h1>
+    <p class="lead">Book your ride anywhere in Sri Lanka with Spero.</p>
     <a href="booking.html" class="btn btn-light btn-lg mt-3">Book a Ride</a>
   </div>
 </section>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
